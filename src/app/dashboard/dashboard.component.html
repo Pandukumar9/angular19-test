@@ -11,10 +11,36 @@
 
 <!-- <app-comp-1 [priceMode]="displayMode"></app-comp-1> -->
 
-<app-comp-1></app-comp-1>
+<!-- <app-comp-1></app-comp-1> -->
 
 <!-- <app-comp-1 [mode]="displayMode"></app-comp-1> -->
 
-<app-comp-2></app-comp-2>
+<!-- Hourly<input type="checkbox" role="switch" (click)="changeMode()">Monthly -->
+<!-- angular provides to pass direcctly from template string or an expresion -->
+<!-- <app-comp-1 [priceMode]="displayMode" name="STARTER" [hourlyPrice]="bestPrice" [storage]="bestStorage"></app-comp-1> -->
+<!-- name="STARTER" -- this is string merge_type for static we use this otherwise below we can use -->
+<!-- [name]="'STARTER'" -- expresiontype -->
+<!-- <app-comp-2 [priceMode]="displayMode" name="BUSINESS" [hourlyPrice]="bestPrice*4" [storage]="bestStorage*5"></app-comp-2> -->
 
-<app-comp-3></app-comp-3>
+<!-- <app-comp-3 [priceMode]="displayMode" name="ENTERPRISE" [hourlyPrice]="bestPrice*10" [storage]="bestStorage*25"></app-comp-3> -->
+
+<div class="row">
+  <div class="d-flex align-items-center mt-3">
+    <span class="me-2">Hourly</span>
+    <input
+      type="checkbox"
+      class="form-check-input"
+      role="switch"
+      (click)="changeMode()">
+    <span class="ms-2">Monthly</span>
+  </div>
+  <div class="col-md-4">
+    <app-comp-1 [priceMode]="displayMode" name="STARTER" [hourlyPrice]="bestPrice" [storage]="bestStorage"></app-comp-1>
+  </div>
+  <div class="col-md-4">
+    <app-comp-2 [priceMode]="displayMode" name="BUSINESS" [hourlyPrice]="bestPrice*4" [storage]="bestStorage*5"></app-comp-2>
+  </div>
+  <div class="col-md-4">
+    <app-comp-3 [priceMode]="displayMode" name="ENTERPRISE" [hourlyPrice]="bestPrice*10" [storage]="bestStorage*25"></app-comp-3>
+  </div>
+</div>

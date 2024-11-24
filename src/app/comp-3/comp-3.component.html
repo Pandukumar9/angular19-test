@@ -1,1 +1,23 @@
-<p>comp-3 works!</p>
+<div class="container my-3">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <!-- Name -->
+      <h5 class="card-title text-primary">
+        {{ name() }}
+      </h5>
+
+      <!-- Storage -->
+      <p class="card-text text-secondary mb-2">
+        Storage: {{ storage() }}TB
+      </p>
+
+      <!-- Price -->
+      <p class="card-text text-success">
+        Price: ${{ price() }}
+        <small class="text-muted">
+          /{{ priceMode() }}
+        </small>
+      </p>
+    </div>
+  </div>
+</div>

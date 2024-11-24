@@ -1,0 +1,26 @@
+<!-- there are 2 signals
+1. writable
+  - writable signal does'nt depend on other signals
+  - quantity = signal(1); //this is writable signal
+  - writable signals are readable and write
+  - writable signal support an additional method for changing the value.
+
+2. computed
+  - it will depend on other signals
+  - total = this.price * this.quantity(); //this is commputed signal
+  - when the quantity was changed then , the expression automatically re-executed and get new value to total
+  - computed signals are always readable only not for write -->
+
+
+  <div>Price : ${{price}}</div>
+
+  <div>Color: black</div>
+
+  <button (click)="plus()">+</button>
+
+  <span>{{ quantity() }}</span>
+
+  <button (click)="minus()">-</button>
+
+  <hr>
+  <div>Total : ${{ total() }}</div>

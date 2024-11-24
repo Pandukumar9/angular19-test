@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, effect, input } from '@angular/core';
 
 @Component({
   selector: 'app-comp-1',
@@ -52,6 +52,31 @@ export class Comp1Component {
   //   transform: (value:string | number) => value + 'ly',
   //   alias: 'mode' //passing options
   // });
+
+  constructor(){
+    let logPrice = effect(() => {
+      console.log('effect : ' + this.price());
+    })
+  }
+  // private logPrice = effect(() => {
+  //   console.log('effect : ' + this.price());
+  // })
+
+  priceMode = input('month');
+  name = input('default');
+  // hourlyPrice = input(0)
+  // storage = input(0);
+
+  hourlyPrice = input.required<number>()
+  storage = input.required<number>();
+
+  price = computed(() => {
+    if(this.priceMode() === 'month'){
+      return Math.round(this.hourlyPrice() * 24 * 30)
+    }
+    return this.hourlyPrice();
+  });
+
 
 
 }

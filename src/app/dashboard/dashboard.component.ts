@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-   displayMode = 'hour';
+  //  displayMode = 'hour';
    isChecked:boolean=false;
   //  isChecked == false?
 
@@ -23,4 +23,12 @@ export class DashboardComponent {
   getTest(){
     return 'testing';
   }
+  displayMode = 'hour';
+  bestPrice = 0.1;
+  bestStorage = 2;
+
+  changeMode(){
+    this.displayMode = ( this.displayMode === 'hour' )? 'month' : 'hour';
+  }
+
 }
