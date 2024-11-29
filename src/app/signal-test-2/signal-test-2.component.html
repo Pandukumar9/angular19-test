@@ -44,6 +44,18 @@
           </div>
           }
         </div>
+        <div class="custmstyle">
+          <!--Using ng-option and for loop-->
+      <ng-select [(ngModel)]="selectedCar">
+         @for (car of cars; track car.id) {
+         <ng-option [value]="car.id">{{car.name}}</ng-option>
+         }
+     </ng-select>
+     <br><br>
+     <!--Using items input-->
+     <ng-select [items]="cars" bindLabel="name" bindValue="id" [(ngModel)]="selectedCar">
+     </ng-select>
+     </div>
 
         <!-- reset Button -->
         <button type="reset" class="btn btn-success">

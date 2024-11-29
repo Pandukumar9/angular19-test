@@ -1,9 +1,10 @@
+import { NgSelectModule } from '@ng-select/ng-select';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormResetEvent, FormSubmittedEvent, PristineChangeEvent, ReactiveFormsModule, StatusChangeEvent, TouchedChangeEvent, Validators, ValueChangeEvent } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormResetEvent, FormsModule, FormSubmittedEvent, PristineChangeEvent, ReactiveFormsModule, StatusChangeEvent, TouchedChangeEvent, Validators, ValueChangeEvent } from '@angular/forms';
 
 @Component({
   selector: 'app-signal-test-2',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,FormsModule,NgSelectModule],
   templateUrl: './signal-test-2.component.html',
   styleUrl: './signal-test-2.component.scss'
 })
@@ -65,4 +66,13 @@ export class SignalTest2Component implements OnInit{
       alert('Form submitted successfully!');
     }
   }
+
+  selectedCar!: number;
+
+  cars = [
+      { id: 1, name: 'Volvo' },
+      { id: 2, name: 'Saab' },
+      { id: 3, name: 'Opel' },
+      { id: 4, name: 'Audi' },
+  ];
 }

@@ -8,9 +8,11 @@ import { SignalTest2Component } from './signal-test-2/signal-test-2.component';
 import { UserSingleCompComponent } from './user-single-comp/user-single-comp.component';
 import { ResourceTestComponent } from './resource-test/resource-test.component';
 import { BootstrapDialogComponent } from './bootstrap-dialog/bootstrap-dialog.component';
+import { NgselectTestComponent } from './ngselect-test/ngselect-test.component';
+import { SkeletonTestComponent } from './skeleton-test/skeleton-test.component';
 @Component({
   selector: 'app-root',
-  imports: [CommonModule,LatestupdatesComponent,DashboardComponent,FormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent],
+  imports: [CommonModule,LatestupdatesComponent,DashboardComponent,FormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
