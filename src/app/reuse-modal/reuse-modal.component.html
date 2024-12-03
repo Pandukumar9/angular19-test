@@ -1,0 +1,13 @@
+<div class="card confirmation-card shadow-sm">
+  <div class="card-header text-center bg-primary text-white">
+    <i class="bi bi-question-circle" style="font-size: 1.5rem;"></i>
+    <h5 class="mt-2">Confirm Your Action</h5>
+  </div>
+  <div class="card-body text-center">
+    <p class="card-text">Are you sure you want to proceed with this action?</p>
+  </div>
+  <div class="card-footer d-flex justify-content-around">
+    <button type="button" class="btn btn-outline-primary" (click)="onCancel()">Cancel</button>
+    <button type="button" class="btn btn-danger" (click)="onConfirm()">Confirm</button>
+  </div>
+</div>

@@ -1,5 +1,8 @@
-<button mat-raised-button color="primary" (click)="openDialog(template)">Open Modal</button>
+<button mat-raised-button color="primary" (click)="openDialog(template)">Open template Modal</button>
 
+<button mat-raised-button color="primary" (click)="openDialog2()">Open separate template Modal</button>
+
+<!-- this is open dialog with template  -->
 <ng-template #template let-data>
   <div mat-dialog-content>
     <h2 class="modal-title">Welcome, {{ data.name }}!</h2>

@@ -1,6 +1,7 @@
 import { Component, inject, TemplateRef } from '@angular/core';
 import {MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { ReuseModalComponent } from '../reuse-modal/reuse-modal.component';
 
 @Component({
   selector: 'app-modal-mat',
@@ -32,5 +33,24 @@ export class ModalMatComponent {
     if (this.dialogRef) {
       this.dialogRef.close(result); // Close the dialog and pass the result
     }
+  }
+
+  // this is dialog with passing data
+   users = [
+    {id:1,name:'madhu',city:'wgl'},
+    {id:2,name:'prudvi',city:'hnk'},
+    {id:3,name:'kartik',city:'hyd'}
+  ];
+
+  openDialog2(){
+    const dialogref = this.dialog.open(ReuseModalComponent, {
+      data: {
+       userdata : this.users
+      }
+    });
+
+    dialogref.afterClosed().subscribe(res => {
+      console.log(res,'pandu');
+    })
   }
 }
