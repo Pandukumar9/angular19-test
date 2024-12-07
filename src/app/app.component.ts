@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LatestupdatesComponent } from './latestupdates/latestupdates.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignalTest1Component } from './signal-test-1/signal-test-1.component';
 import { SignalTest2Component } from './signal-test-2/signal-test-2.component';
 import { UserSingleCompComponent } from './user-single-comp/user-single-comp.component';
@@ -12,9 +12,10 @@ import { NgselectTestComponent } from './ngselect-test/ngselect-test.component';
 import { SkeletonTestComponent } from './skeleton-test/skeleton-test.component';
 import { PopupsTestComponent } from './popups-test/popups-test.component';
 import { ModalMatComponent } from './modal-mat/modal-mat.component';
+import { SignalLearnpnComponent } from './signal-learnpn/signal-learnpn.component';
 @Component({
   selector: 'app-root',
-  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent],
+  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
