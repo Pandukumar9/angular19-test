@@ -13,9 +13,10 @@ import { SkeletonTestComponent } from './skeleton-test/skeleton-test.component';
 import { PopupsTestComponent } from './popups-test/popups-test.component';
 import { ModalMatComponent } from './modal-mat/modal-mat.component';
 import { SignalLearnpnComponent } from './signal-learnpn/signal-learnpn.component';
+import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
 @Component({
   selector: 'app-root',
-  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent],
+  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
