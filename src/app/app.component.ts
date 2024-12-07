@@ -14,9 +14,10 @@ import { PopupsTestComponent } from './popups-test/popups-test.component';
 import { ModalMatComponent } from './modal-mat/modal-mat.component';
 import { SignalLearnpnComponent } from './signal-learnpn/signal-learnpn.component';
 import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
+import { TemplateFormValComponent } from './template-form-val/template-form-val.component';
 @Component({
   selector: 'app-root',
-  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent],
+  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent,TemplateFormValComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

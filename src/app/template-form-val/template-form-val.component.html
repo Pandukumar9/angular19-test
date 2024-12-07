@@ -1,0 +1,85 @@
+<div class="container mt-5">
+  <h2>User Registration</h2>
+  <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+    <!-- Name Field -->
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        ngModel
+        #name="ngModel"
+        required
+      />
+      <div *ngIf="name.invalid && name.touched" class="text-danger">
+        Name is required.
+      </div>
+    </div>
+
+    <!-- Email Field -->
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        ngModel
+        #email="ngModel"
+        required
+        email
+      />
+      <div *ngIf="email.invalid && email.touched" class="text-danger">
+        A valid email is required.
+      </div>
+    </div>
+
+    <!-- Password Field -->
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        class="form-control"
+        ngModel
+        #password="ngModel"
+        required
+        minlength="6"
+      />
+      <div *ngIf="password.invalid && password.touched" class="text-danger">
+        Password must be at least 6 characters long.
+      </div>
+    </div>
+
+    <!-- Terms and Conditions -->
+    <div class="form-check mb-3">
+      <input
+        type="checkbox"
+        id="terms"
+        name="terms"
+        class="form-check-input"
+        ngModel
+        #terms="ngModel"
+        required
+      />
+      <label for="terms" class="form-check-label">
+        I agree to the terms and conditions
+      </label>
+      <div *ngIf="terms.invalid && terms.touched" class="text-danger">
+        You must accept the terms and conditions.
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="registrationForm.invalid"
+    >
+      Register
+    </button>
+  </form>
+</div>
