@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,7 +9,13 @@ import { Component } from '@angular/core';
 })
 export class GetApiComponent {
 
-  constructor(){
+  constructor(private http:HttpClient){
 
+  }
+
+  getproducsts(){
+    this.http.get("https://fakestoreapi.com/products").subscribe(res => {
+      console.log(res,'res');
+    })
   }
 }
