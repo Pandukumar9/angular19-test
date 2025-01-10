@@ -31,4 +31,15 @@ export class AppComponent {
   open(modal: any){
     // this.modalService.open(modal);
   }
+
+  colomnlist:any[] = ['employeeName', 'contactNo' , 'emailId','deptId'];
+
+  employeesData = [
+    { employeeName: 'John Doe', contactNo: '123-456-7890', emailId: 'john.doe@example.com', deptId: 'HR' },
+    { employeeName: 'Jane Smith', contactNo: '987-654-3210', emailId: 'jane.smith@example.com', deptId: 'Finance' },
+    { employeeName: 'Alice Johnson', contactNo: '456-789-0123', emailId: 'alice.johnson@example.com', deptId: 'IT' },
+    { employeeName: 'Bob Brown', contactNo: '789-012-3456', emailId: 'bob.brown@example.com', deptId: 'Operations' },
+    { employeeName: 'Eve Adams', contactNo: '321-654-0987', emailId: 'eve.adams@example.com', deptId: 'Marketing' },
+  ];
+
 }
