@@ -16,9 +16,10 @@ import { SignalLearnpnComponent } from './signal-learnpn/signal-learnpn.componen
 import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
 import { TemplateFormValComponent } from './template-form-val/template-form-val.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReuseTableComponent } from './reuse-table/reuse-table.component';
 @Component({
   selector: 'app-root',
-  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent,TemplateFormValComponent,ReactiveFormComponent],
+  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent,TemplateFormValComponent,ReactiveFormComponent,ReuseTableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
