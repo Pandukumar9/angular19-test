@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Output } from '@angular/core';
-import { EventEmitter } from 'stream';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-reuse-table',
@@ -9,23 +8,28 @@ import { EventEmitter } from 'stream';
   styleUrl: './reuse-table.component.scss'
 })
 export class ReuseTableComponent {
-  @Input() columnArray:string[] =[];
+  @Input() columnArray:TableColumn[] =[];
 
   @Input() gridData:any[] =[];
 
-  @Output() onEdit = new EventEmitter<any>();
-  @Output() onDelete = new EventEmitter<any>();
+  @Output() onEditClicked = new EventEmitter<any>();
+  @Output() onDeleteClicked = new EventEmitter<any>();
 
   isEdit:boolean = false;
 
-  editItem(item: any) {
-    alert(`Editing item: ${item.name}`);
+  onEditBtnClicked(item: any) {
+    this.onEditClicked.emit(item);
   }
 
-  deleteItem(item: any) {
-    if (confirm(`Are you sure you want to delete ${item.name}?`)) {
-      this.gridData = this.gridData.filter(i => i !== item);
-    }
+  onDeleteBtnClicked(item: any) {
+    this.onDeleteClicked.emit(item);
   }
 
+}
+
+
+export interface TableColumn{
+   fieldName : string,
+   headerName : string,
+   dataType : string
 }

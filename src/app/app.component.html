@@ -115,4 +115,4 @@
 
 <app-reactive-form></app-reactive-form>
 
-<app-reuse-table [columnArray]="colomnlist" [gridData]="employeesData"></app-reuse-table>
+<app-reuse-table [columnArray]="colomnlist" [gridData]="employeesData" (onDeleteClicked)="onDelete($event)" (onEditClicked)="onEdit($event)"></app-reuse-table>

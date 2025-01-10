@@ -16,7 +16,7 @@ import { SignalLearnpnComponent } from './signal-learnpn/signal-learnpn.componen
 import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
 import { TemplateFormValComponent } from './template-form-val/template-form-val.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { ReuseTableComponent } from './reuse-table/reuse-table.component';
+import { ReuseTableComponent, TableColumn } from './reuse-table/reuse-table.component';
 @Component({
   selector: 'app-root',
   imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent,TemplateFormValComponent,ReactiveFormComponent,ReuseTableComponent],
@@ -32,7 +32,25 @@ export class AppComponent {
     // this.modalService.open(modal);
   }
 
-  colomnlist:any[] = ['employeeName', 'contactNo' , 'emailId','deptId'];
+  colomnlist:TableColumn[] = [
+    {
+      fieldName : "employeeName",
+      headerName : "Employee Name"
+    },
+    {
+      fieldName : "contactNo",
+      headerName : "Contact No"
+    },
+    {
+      fieldName : "emailId",
+      headerName : "Email Id"
+    },
+    {
+      fieldName : "deptId",
+      headerName : "Dept Id"
+    },
+    // 'employeeName', 'contactNo' , 'emailId','deptId'
+  ];
 
   employeesData = [
     { employeeName: 'John Doe', contactNo: '123-456-7890', emailId: 'john.doe@example.com', deptId: 'HR' },
@@ -41,5 +59,13 @@ export class AppComponent {
     { employeeName: 'Bob Brown', contactNo: '789-012-3456', emailId: 'bob.brown@example.com', deptId: 'Operations' },
     { employeeName: 'Eve Adams', contactNo: '321-654-0987', emailId: 'eve.adams@example.com', deptId: 'Marketing' },
   ];
+
+  onDelete(data:any){
+
+  }
+
+  onEdit(data:any){
+
+  }
 
 }

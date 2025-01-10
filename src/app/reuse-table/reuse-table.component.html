@@ -4,7 +4,7 @@
       <tr>
         <th>S.No</th>
         @for (item of columnArray; track $index) {
-          <th>{{item}}</th>
+          <th>{{item.headerName}}</th>
         }
         <th>Actions</th>
       </tr>
@@ -14,11 +14,11 @@
         <tr>
           <td>{{ $index + 1 }}</td>
           @for (columnName of columnArray; track $index) {
-            <td>{{ item[columnName]}}</td>
+            <td>{{ item[columnName.fieldName]}}</td>
           }
           <td>
-            <button class="btn btn-primary btn-sm" (click)="editItem(item)">Edit</button>
-            <button class="btn btn-danger btn-sm" (click)="deleteItem(item)">Delete</button>
+            <button class="btn btn-primary btn-sm" (click)="onEditBtnClicked(item)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="onDeleteBtnClicked(item)">Delete</button>
           </td>
         </tr>
       }
