@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<!-- <div class="table-responsive">
   <table class="table table-striped table-bordered">
     <thead class="thead-dark">
       <tr>
@@ -22,6 +22,51 @@
           </td>
         </tr>
       }
+    </tbody>
+  </table>
+</div> -->
+<div class="table-responsive">
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <!-- Search Input -->
+      <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchTerm" (input)="onSearch()">
+    </div>
+    <div class="col-md-6">
+ <!-- Pagination -->
+ <div *ngIf="totalItems > itemsPerPage">
+  <!-- <pagination-controls
+    (pageChange)="onPageChange($event)"
+    [totalItems]="totalItems"
+    [itemsPerPage]="itemsPerPage">
+  </pagination-controls> -->
+</div>
+    </div>
+  </div>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>S.No</th>
+        <!-- Column Headers with Sorting -->
+        <th *ngFor="let item of columnArray; let i = index">
+          <span (click)="onSort(i)">{{ item.headerName }}</span>
+          <span *ngIf="sortColumnIndex === i">
+            <i class="fa" [ngClass]="{'fa-sort-asc': sortDirection === 'asc', 'fa-sort-desc': sortDirection === 'desc'}"></i>
+          </span>
+        </th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of paginatedData; let index = index">
+        <td>{{ (currentPage - 1) * itemsPerPage + index + 1 }}</td>
+        <td *ngFor="let column of columnArray">
+          {{ item[column.fieldName] }}
+        </td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="onEditBtnClicked(item)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="onDeleteBtnClicked(item)">Delete</button>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>

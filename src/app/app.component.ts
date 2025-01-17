@@ -17,9 +17,11 @@ import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
 import { TemplateFormValComponent } from './template-form-val/template-form-val.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReuseTableComponent, TableColumn } from './reuse-table/reuse-table.component';
+import { ReuseFormComponent } from './reuse-form/reuse-form.component';
+import { FormElement } from './models/commonmodels';
 @Component({
   selector: 'app-root',
-  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent,TemplateFormValComponent,ReactiveFormComponent,ReuseTableComponent],
+  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent,TemplateFormValComponent,ReactiveFormComponent,ReuseTableComponent,ReuseFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -48,7 +50,7 @@ export class AppComponent {
     {
       fieldName : "deptId",
       headerName : "Dept Id"
-    },
+    }
     // 'employeeName', 'contactNo' , 'emailId','deptId'
   ];
 
@@ -67,5 +69,12 @@ export class AppComponent {
   onEdit(data:any){
 
   }
+
+  departmentFieldsList: FormElement[] = [
+    {fieldName: "deptId" , inputType: "text" , label : "Department Id"},
+    {fieldName: "deptName" , inputType: "text" , label : "Department Name"},
+    {fieldName: "deptLogo" , inputType: "text" , label : "Department Logo"},
+    {fieldName: "isActive" , inputType: "checkbox" , label : "Is Active"}
+  ]
 
 }
