@@ -20,9 +20,10 @@ import { ReuseTableComponent, TableColumn } from './reuse-table/reuse-table.comp
 import { ReuseFormComponent } from './reuse-form/reuse-form.component';
 import { FormElement } from './models/commonmodels';
 import { ReuseTableFilter2Component } from './reuse-table-filter2/reuse-table-filter2.component';
+import { UserListComponent } from './task1/user-list/user-list.component';
 @Component({
   selector: 'app-root',
-  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent,TemplateFormValComponent,ReactiveFormComponent,ReuseTableComponent,ReuseFormComponent,ReuseTableFilter2Component],
+  imports: [LatestupdatesComponent,DashboardComponent,FormsModule,ReactiveFormsModule,SignalTest1Component,SignalTest2Component,UserSingleCompComponent,ResourceTestComponent,BootstrapDialogComponent,NgselectTestComponent,SkeletonTestComponent,PopupsTestComponent,ModalMatComponent,SignalLearnpnComponent,LinkedSignalComponent,TemplateFormValComponent,ReactiveFormComponent,ReuseTableComponent,ReuseFormComponent,ReuseTableFilter2Component, UserListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
